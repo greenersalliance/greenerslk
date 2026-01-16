@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greener's Alliance - Human & Nature-Friendly</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root { --forest-green: #2D5A27; --ocean-blue: #1B365D; --heritage-gold: #C5A059; --cream: #F5F1E8; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        .hero-section { background: linear-gradient(rgba(45,90,39,0.7), transparent), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854'); background-size: cover; background-position: center; min-height: 100vh; }
+        .btn-primary { background-color: var(--heritage-gold) !important; border: none !important; }
+        .bg-primary { background-color: var(--forest-green) !important; }
+        .text-primary { color: var(--ocean-blue) !important; }
+        .counter { font-size: 2.5rem; font-weight: bold; color: var(--heritage-gold); }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: var(--forest-green);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><strong>Greener's Alliance</strong></a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link text-white" href="index.html">Mission</a>
+      <a class="nav-link text-white" href="agritourism.html">Tourism</a>
+      <a class="nav-link text-white" href="innovation.html">Innovation</a>
+      <a class="nav-link text-white" href="products.html">Products</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-section d-flex align-items-center">
+  <div class="container text-center text-white">
+    <h1 class="display-3">Human & Nature-Friendly Philosophy</h1>
+    <p class="lead">Where 28 Years of Agricultural Excellence Meets Regenerative Tourism in Kandana</p>
+    <div class="mt-4">
+      <a href="agritourism.html" class="btn btn-primary btn-lg">Experience Greener's Way</a>
+      <a href="#investors" class="btn btn-outline-light btn-lg">View Investor Deck</a>
+    </div>
+  </div>
+</div>
+
+<!-- Value Trinity -->
+<div class="container text-center py-5">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>🌍 Planet</h2>
+      <div class="counter" data-target="6">0</div>
+      <p>Community Units</p>
+    </div>
+    <div class="col-md-4">
+      <h2>🤝 People</h2>
+      <div class="counter" data-target="11">0</div>
+      <p>B2B Clients</p>
+    </div>
+    <div class="col-md-4">
+      <h2>💼 Profit</h2>
+      <div class="counter" data-target="40">0</div>
+      <p>Cow Dairy Herd</p>
+    </div>
+  </div>
+</div>
+
+<!-- PGS Certification Strip -->
+<div class="container-fluid py-4" style="background: var(--cream);">
+  <div class="container">
+    <h3 class="text-center mb-3">Cosmo Vision PGS Certification Levels</h3>
+    <div class="row text-center">
+      <div class="col-md-4">Level 1: <span style="color: var(--forest-green);">Organic</span></div>
+      <div class="col-md-4">Level 2: <span style="color: var(--ocean-blue);">Biodiversity</span></div>
+      <div class="col-md-4">Level 3: <span style="color: var(--heritage-gold);">Cultural Values</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Asset Showcase -->
+<div class="container py-5">
+  <h2 class="text-center mb-4">Our Assets</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b" class="img-fluid rounded" alt="Kandana Facility">
+      <p class="text-center mt-2">2000 sq ft Facility</p>
+    </div>
+    <div class="col-md-3">
+      <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30" class="img-fluid rounded" alt="Mixed Farm">
+      <p class="text-center mt-2">6-Hectare Mixed Farm</p>
+    </div>
+    <div class="col-md-3">
+      <img src="https://images.unsplash.com/photo-1562629864-5c44bb1f668f" class="img-fluid rounded" alt="Dairy">
+      <p class="text-center mt-2">40-Cow Dairy</p>
+    </div>
+    <div class="col-md-3">
+      <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9" class="img-fluid rounded" alt="Tea Tourism">
+      <p class="text-center mt-2">1.5-Acre Tea Tourism</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-4" style="background: var(--ocean-blue); color: white;">
+  <p>&copy; 2025 Greener's Alliance, Kandana, Sri Lanka</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/counterup2@2.0.2/dist/index.min.js"></script>
+<script>
+  // Counter Animation
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const increment = target / 100;
+    const update = () => {
+      const count = +counter.innerText;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(update, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  });
+</script>
+
+</body>
+</html>
